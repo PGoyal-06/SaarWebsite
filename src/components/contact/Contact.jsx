@@ -55,7 +55,7 @@ function Contact() {
     <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto lg:grid lg:grid-cols-2 lg:gap-8">
         {/* Get in touch section with gradient */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-400 text-white p-6 rounded-lg shadow-lg">
+        <div className="bg-gradient-to-r from-blue-500 to-blue-300 text-white p-6 rounded-lg shadow-lg">
           <h2 className="text-3xl font-extrabold">Get in touch</h2>
           <p className="mt-4 text-lg leading-6">
             Whether you have a question about our services, need assistance, or
