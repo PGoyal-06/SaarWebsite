@@ -1,52 +1,47 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Slider from "react-slick";
+import { FaStar } from "react-icons/fa";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const testimonials = [
   {
-    name: 'Anshu Puri',
-    role: 'CEO of Workcation',
-    imageUrl: '/anshu.png',
+    name: "Anshu Puri",
+    imageUrl: "/anshu.png",
     review:
-      'We do our corporate & personal returns from SAAR Professional Consultant. Really like the way they deal with the clients. True professionals, save you a lot of money with their great investing tips and provide knowledge about how to manage your funds. Rohit has been extremely helpful and is always available whenever we need help with any financial matter.',
+      "We do our corporate & personal returns from SAAR Professional Consultant. Really like the way they deal with the clients. True professionals, save you a lot of money with their great investing tips and provide knowledge about how to manage your funds. Rohit has been extremely helpful and is always available whenever we need help with any financial matter.",
   },
   {
-    name: 'Manoj Kumar',
-    role: 'CEO of Workcation',
-    imageUrl: '/manoj.png',
+    name: "Manoj Kumar",
+    imageUrl: "/manoj.png",
     review:
-      'Outstanding Service. Overall experience was pleasant. They are professional, attentive and friendly. They talked me through the process and answered any questions I had. They always promptly responded to my emails and answer any queries that I had. Highly recommend them.',
+      "Outstanding Service. Overall experience was pleasant. They are professional, attentive and friendly. They talked me through the process and answered any questions I had. They always promptly responded to my emails and answer any queries that I had. Highly recommend them.",
   },
   {
-    name: 'Eklavya Malik',
-    role: 'CEO of Workcation',
-    imageUrl: '/Eklavya.png',
+    name: "Eklavya Malik",
+    imageUrl: "/Eklavya.png",
     review:
-      'Rohit is very professional in his dealing. He overdelivers and never misses any committed timeline which speaks volumes about his working style. His understanding of business financing, accounting etc is top notch and he is able to find solutions in the most tax efficient and compliant manner.  It has been a pleasure working with him.',
+      "Rohit is very professional in his dealing. He overdelivers and never misses any committed timeline which speaks volumes about his working style. His understanding of business financing, accounting etc is top notch and he is able to find solutions in the most tax efficient and compliant manner.  It has been a pleasure working with him.",
   },
   {
-    name: 'Vidushi Tickoo',
-    role: 'CEO of Workcation',
-    imageUrl: '/Vidushi.png',
+    name: "Vidushi Tickoo",
+    imageUrl: "/Vidushi.png",
     review:
-      'Rohit is very professional, considerate and trustworthy, he always has his clients best interest in mind. I blindly follow his honest opinions and genuine concern. With him, no question is a bad question, feel free to talk to him and he will explain the pros and cons to you with patience.',
+      "Rohit is very professional, considerate and trustworthy, he always has his clients best interest in mind. I blindly follow his honest opinions and genuine concern. With him, no question is a bad question, feel free to talk to him and he will explain the pros and cons to you with patience.",
   },
   {
-    name: 'Angel',
-    role: 'CEO of Workcation',
-    imageUrl: '/Angel.png',
+    name: "Angel",
+    imageUrl: "/Angel.png",
     review:
-      'Best CPA in the entire GTA!! super speedy service. Help provided at every step. You get the service as you like, on-line or in- person. I have been to various other tax filing companies and agents , by far THE MOST EFFICIENT WORK has been only found with them. I highly recommed everyone to come and get the same experience.! Thank you Mr. Rohit for world class experience and help!',
+      "Best CPA in the entire GTA!! super speedy service. Help provided at every step. You get the service as you like, on-line or in- person. I have been to various other tax filing companies and agents , by far THE MOST EFFICIENT WORK has been only found with them. I highly recommed everyone to come and get the same experience.! Thank you Mr. Rohit for world class experience and help!",
   },
   {
-    name: 'Grace Demill',
-    role: 'CEO of Workcation',
-    imageUrl: '/Grace.png',
+    name: "Grace Demill",
+    imageUrl: "/Grace.png",
     review:
-      'This was my first time filing my own return as a new graduate, and Rohit was extremely helpful and responsive in answering my questions. He went above and beyond to ensure that I deferred my Education payment relief correctly, and educated me on the additional areas where I could communicate my costs of working from home. Thank you Rohit!',
+      "This was my first time filing my own return as a new graduate, and Rohit was extremely helpful and responsive in answering my questions. He went above and beyond to ensure that I deferred my Education payment relief correctly, and educated me on the additional areas where I could communicate my costs of working from home. Thank you Rohit!",
   },
   // Add more testimonials as needed
 ];
@@ -125,9 +120,17 @@ function Testimonial() {
                         {testimonial.name}
                       </h3>
                       <p className="text-gray-600">{testimonial.role}</p>
+                      {/* Star Ratings */}
+                      <div className="flex mt-2">
+                        {[...Array(5)].map((_, i) => (
+                          <FaStar key={i} className="text-yellow-500 h-5 w-5" />
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <p className="text-gray-600 flex-grow">{testimonial.review}</p>
+                  <p className="text-gray-600 flex-grow">
+                    {testimonial.review}
+                  </p>
                 </div>
               </motion.div>
             ))}
